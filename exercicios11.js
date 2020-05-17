@@ -1,0 +1,28 @@
+let aliquotaINSS;
+let aliquotaIR;
+
+let salarioBruto = "2000";
+
+if (salarioBruto >= 1556.94) {
+    aliquotaINSS = salarioBruto * 0.08;
+}
+else if (salarioBruto >= 2594.92) {
+    aliquotaINSS = salarioBruto * 0.09;
+}
+else if (salarioBruto >= 5189.82) {
+    aliquotaINSS = salarioBruto * 0.11;
+}
+else {
+    aliquotaINSS = 570.88;
+}
+
+let salarioLiquido = salarioBruto - aliquotaINSS;
+
+if (salarioLiquido <= 1903.98) {
+    aliquotaIR = 0;
+}
+else if (salarioLiquido <= 2826.65) {
+    aliquotaIR = salarioLiquido * 0.075 - 142.80
+}
+
+console.log("Salario:" + (salarioLiquido - aliquotaIR));
